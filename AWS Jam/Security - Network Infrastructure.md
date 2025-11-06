@@ -136,7 +136,7 @@ Se pide buscar el siguiente **salto del tráfico**. En el paso anterior se vio q
 
 Tras ello busco las subredes que tiene, identifico la que pertenece a VPC 1, y me meto en **Route table**. El siguiente salto es a la NAT.
 
-![[Pasted image 20250926234716.png]]
+
 
 ![[Pasted image 20250926234729.png]]
 
