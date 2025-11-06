@@ -1,16 +1,18 @@
 ## Fix my research
 ### Task 1
 
-![[Pasted image 20250926180124.png]]
+<img width="1230" height="589" alt="Pasted image 20250926180124" src="https://github.com/user-attachments/assets/8b15375d-ce84-48f2-b927-82c4ff3f3c63" />
 
-![[Pasted image 20250926180134.png]]
+
+<img width="821" height="191" alt="Pasted image 20250926180134" src="https://github.com/user-attachments/assets/fd42fc77-7d9d-4244-83f9-126047e53aab" />
 
 ### Task 2: Fix the Ports
 #### Your Task
 Your task is to fix the Security Group to communicate via a single port.
 
 
-![[Pasted image 20250926180941.png]]
+<img width="925" height="196" alt="Pasted image 20250926180941" src="https://github.com/user-attachments/assets/f3cc2712-4ba4-49e0-a33a-22eb432c3dc6" />
+
 
 Se eliminan las dos reglas de salida existentes, y agrego una que va por HTTPS. El destino tiene que ser solo s3, para lo cual están las **prefix lists.**
 
@@ -21,7 +23,8 @@ Pide actualizar en la KMS los permisos para que el rol asignado al **Lambda** te
 #### Your Task
 > The file in S3 seems to have been encrypted using a Customer Managed KMS key for which the role attached to lambda "GenerateHashLambda" does not have access. Use the below documentation to understand key policy and update it to provide lambda role permission to use the key
 
-![[Pasted image 20250926183147.png]]
+<img width="796" height="340" alt="Pasted image 20250926183147" src="https://github.com/user-attachments/assets/666196f5-c44f-454a-a04f-46fc3bd618e6" />
+
 
 Se agrega eso y ya funciona
 
@@ -31,9 +34,11 @@ Se agrega eso y ya funciona
 
 ### Task 1
 Se explica que hay un **AWS WAF(Web Application Firewall)**, pero no se sabe si se está usando, por lo que hay que revisar la configuración del **Web ACL**
-![[Pasted image 20250926183619.png]]
+<img width="1217" height="529" alt="Pasted image 20250926183619" src="https://github.com/user-attachments/assets/1f0e61e6-dc59-49b0-8adc-9c1a6109953f" />
 
-![[Pasted image 20250926183633.png]]
+
+<img width="819" height="485" alt="Pasted image 20250926183633" src="https://github.com/user-attachments/assets/584487f1-9c28-4106-9089-7797422858d0" />
+
 
 
 ### Task 2: Prevent Security Attacks - Part 1
@@ -46,15 +51,19 @@ Se explica que hay un **AWS WAF(Web Application Firewall)**, pero no se sabe si 
 - Create and add a Rate Based rule (named `RateBasedRule`) such that any user which tries to access a URI path ending with `login` more than 100 times in a 5-mins interval, those requests will be `BLOCKED`
 
 **1->**
-![[Pasted image 20250926184004.png]]
+<img width="848" height="516" alt="Pasted image 20250926184004" src="https://github.com/user-attachments/assets/c649d5aa-0fed-4b78-82e4-6d0cb6147d47" />
+
 
 
 **2->**
-![[Pasted image 20250926184119.png]]
+<img width="904" height="650" alt="Pasted image 20250926184119" src="https://github.com/user-attachments/assets/30151c3b-7629-49ce-b587-3bf03beb6eba" />
 
-![[Pasted image 20250926184454.png]]
 
-![[Pasted image 20250926184503.png]]
+<img width="784" height="627" alt="Pasted image 20250926184454" src="https://github.com/user-attachments/assets/3d28e523-ae26-48a1-9cb0-4c4e455a0c2b" />
+
+
+<img width="850" height="497" alt="Pasted image 20250926184503" src="https://github.com/user-attachments/assets/e722c62e-4c56-49b4-a0f1-2b5eb12d58fb" />
+
 
 
 ### Task 3: Prevent Security Attacks - Part 2
@@ -75,17 +84,22 @@ Constraints:
 
 **Crear IPSet**
 
-![[Pasted image 20250926184820.png]]
+<img width="756" height="447" alt="Pasted image 20250926184820" src="https://github.com/user-attachments/assets/dd2fbe0e-a321-495e-9bd5-671a61c90c2c" />
+
 
 **Crear regla->**
 
-![[Pasted image 20250926184710.png]]
+<img width="807" height="396" alt="Pasted image 20250926184710" src="https://github.com/user-attachments/assets/c33fec51-dcac-4ef4-bebf-1c115dabc2a3" />
 
-![[Pasted image 20250926185818.png]]
 
-![[Pasted image 20250926185825.png]]
+<img width="811" height="540" alt="Pasted image 20250926185818" src="https://github.com/user-attachments/assets/7bc020b1-cd7e-4fc6-ba29-dfead3e12654" />
 
-![[Pasted image 20250926190119.png]]
+
+<img width="811" height="490" alt="Pasted image 20250926185825" src="https://github.com/user-attachments/assets/9391dcfa-da7d-46c7-935a-ad99632ef76a" />
+
+
+<img width="299" height="70" alt="Pasted image 20250926190119" src="https://github.com/user-attachments/assets/79945593-406d-4ceb-87dc-6429b7626c0a" />
+
 
 Hay que poner **priority** 0.
 
@@ -96,7 +110,8 @@ Hay que poner **priority** 0.
 
 Es buscar la ruta que le da a la VPC 1 acceso a internet.
 
-![[Pasted image 20250926233703.png]]
+<img width="986" height="790" alt="Pasted image 20250926233703" src="https://github.com/user-attachments/assets/cca06c16-a4cd-4402-8a8f-bd03bc297890" />
+
 
 Desde **subnets**, elegir la subred, ver tabla de rutas y copiar el **resource ID**.
 
@@ -110,9 +125,10 @@ Review the **Transit Gateway configuration** and find out how traffic to **Inter
 
 On the navigation pane, choose **Transit Gateway Route Tables**. Choose a route table to display the settings for it.
 
-![[Pasted image 20250926233929.png]]
+<img width="764" height="202" alt="Pasted image 20250926233929" src="https://github.com/user-attachments/assets/697473cb-16a2-4e60-8934-506576ae6b31" />
 
-![[Pasted image 20250926234033.png]]
+
+<img width="984" height="389" alt="Pasted image 20250926234033" src="https://github.com/user-attachments/assets/60ff432f-6b12-4070-94aa-d80643467aa0" />
 
 ### Task 3
 
