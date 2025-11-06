@@ -178,7 +178,7 @@ iam_role 'arn:aws:iam::373859411963:role/Redshiftgamesrole' /*rol*/
 region 'us-east-1'; /*region de la cuenta*/
 ```
 
-No me permite crear usuario, tampoco hace falta ya que nos pide saber cauntos abordaron con DIAMOND, entonces en vez de hacer user y rol en sql, hago un select de la siguiente manera:
+No es necesario crear usuarios y roles para poder consultar los valores solicitados, por lo que primero se completa el apartado y posteriormente realizo la creación de los usuarios y sus respectivos roles
 ```sql
 select * from sailors where s_segment LIKE 'DIAMOND' AND s_onboard = TRUE;
 
